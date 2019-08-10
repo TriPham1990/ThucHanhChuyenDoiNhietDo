@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Thực hành] Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+<h1>Temperature Converter</h1>
+Fahrenheit:<label><input type="number" id="inputFahrenheit" placeholder="Input Fahrenheit"
+                         oninput="temperatureConverter()"></label><br>
+<p>Result:<span id="display"></span></p>
+
+<script>
+    let temperatureC;
+    function temperatureConverter(){
+        let temperatureF = document.getElementById("inputFahrenheit").value;
+        temperatureC = (temperatureF - 32)/1.8;
+        document.getElementById("display").innerHTML = temperatureC ;
+    }
+</script>
+</body>
+</html>
